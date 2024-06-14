@@ -10,7 +10,12 @@
     "start": "tsc -p tsconfig.json --downlevelIteration && node dist/server.js",
     "test": "jest"
   },
-  "keywords": [ "crud", "microservice", "express", "mongodb"],
+  "keywords": [
+    "crud",
+    "microservice",
+    "express",
+    "mongodb"
+  ],
   "author": "Fabio Pedreira Molliet",
   "license": "MIT",
   "dependencies": {
@@ -19,6 +24,7 @@
     "express": "^4.19.2",
     "express-actuator": "^1.8.4",
     "express-oas-generator": "^1.0.46",
+    "mongoose": "^8.4.1",
     "morgan": "^1.10.0",
     "triple-beam": "^1.4.1",
     "ts-node": "^10.9.2",
