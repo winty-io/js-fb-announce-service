@@ -1,0 +1,35 @@
+{
+  "name": "announce-service",
+  "version": "1.0.0",
+  "description": "Serviço de gerenciamento de anuncios do FB 2.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -p tsconfig.json -w --downlevelIteration",
+    "build": "tsc -p tsconfig.json --downlevelIteration",
+    "local": "nodemon dist/server.js -e js",
+    "start": "tsc -p tsconfig.json --downlevelIteration && node dist/server.js",
+    "test": "jest"
+  },
+  "keywords": [ "crud", "microservice", "express", "mongodb"],
+  "author": "Fabio Pedreira Molliet",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-actuator": "^1.8.4",
+    "express-oas-generator": "^1.0.46",
+    "morgan": "^1.10.0",
+    "triple-beam": "^1.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-actuator": "^1.8.3",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.14.2"
+  }
+}
