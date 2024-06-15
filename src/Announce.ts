@@ -7,6 +7,6 @@ const anuncioSchema = new Schema({
     lastPosted: { type: Date, default: Date.now }
   });
   
-const Anuncio = model('Anuncio', anuncioSchema);
+const Announce = model('Anuncio', anuncioSchema);
   
-export default Anuncio;
+export default Announce;

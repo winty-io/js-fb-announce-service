@@ -3,7 +3,6 @@ import express, {Express}    from 'express';
 import {connect}  from 'mongoose';
 import cors       from 'cors';
 import morgan     from 'morgan';
-import oasGenerator from 'express-oas-generator';
 import { config } from 'dotenv';
 import routes     from './Routes';
 import Actuator from './Actuator';
@@ -42,7 +41,6 @@ class App {
   private initializeControllers(){
     this.app.use(Actuator)
     this.app.use('/', routes);
-    oasGenerator.init(this.app, {});
   }
   
 }

@@ -1,5 +1,5 @@
 # Etapa 1: Construção do projeto
-FROM node:16-alpine AS BUILD
+FROM node:18-alpine AS BUILD
 
 # Instale dependências de sistema necessárias
 RUN apk add --no-cache make gcc g++ python3
@@ -20,7 +20,7 @@ COPY . .
 RUN npm run build
 
 # Etapa 2: Imagem final
-FROM node:16-alpine
+FROM node:18-alpine
 
 # Instale curl e outras dependências necessárias
 RUN apk add --no-cache curl
