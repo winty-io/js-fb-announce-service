@@ -17,8 +17,8 @@ class App {
     config();
     this.app = express();
     this.initializeServices()
-    this.initializeControllers();
     this.initializeMiddlewares();
+    this.initializeControllers();
   }
   
   private async initializeServices() {
@@ -32,7 +32,9 @@ class App {
   
   private initializeMiddlewares(){
     this.app.use(cors());
-    this.app.use(morgan('short'));
+    this.app.use(morgan('short',{skip: function(req,res){
+      return req.path.includes("/actuator/health")
+    }}));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(new ErrorHandler().handle);
